@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: whitesmoke;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
