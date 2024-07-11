@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @keyframes climbAnimation {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-50px) rotate(10deg);
+      }
+      50% {
+        transform: translateY(-100px) rotate(-10deg);
+      }
+      75% {
+        transform: translateY(-50px) rotate(10deg);
+      }
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+
+    #mountain {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(to bottom, #b8e994, #78e08f);
+      border-radius: 0 0 50% 50%;
+      margin: 50px auto;
+    }
+
+    #stick-figure {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: climbAnimation 4s ease-in-out infinite;
+    }
+
+    #head, #body, #left-arm, #right-arm, #left-leg, #right-leg {
+      position: absolute;
+      background: black;
+      border-radius: 50%;
+    }
+
+    #head {
+      width: 20px;
+      height: 20px;
+      top: -20px;
+    }
+
+    #body {
+      width: 20px;
+      height: 30px;
+      top: 0;
+    }
+
+    #left-arm, #right-arm {
+      width: 5px;
+      height: 20px;
+      top: 5px;
+    }
+
+    #left-arm {
+      left: 5px;
+      transform-origin: top right;
+      transform: rotate(-20deg);
+    }
+
+    #right-arm {
+      right: 5px;
+      transform-origin: top left;
+      transform: rotate(20deg);
+    }
+
+    #left-leg, #right-leg {
+      width: 5px;
+      height: 20px;
+      top: 30px;
+    }
+
+    #left-leg {
+      left: 5px;
+      transform-origin: top right;
+      transform: rotate(20deg);
+    }
+
+    #right-leg {
+      right: 5px;
+      transform-origin: top left;
+      transform: rotate(-20deg);
+    }
+  </style>
 </head>
 <body>
-    <p>Here are some projects</p>
+  <div id="mountain"></div>
+  <div id="stick-figure">
+    <div id="head"></div>
+    <div id="body"></div>
+    <div id="left-arm"></div>
+    <div id="right-arm"></div>
+    <div id="left-leg"></div>
+    <div id="right-leg"></div>
+  </div>
 </body>
 </html>
